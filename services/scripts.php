@@ -52,7 +52,7 @@ function get_file( $path ) {
 if ( ! defined('SHORTINIT') ) {
 	define('SHORTINIT',true);
 
-	require dirname(dirname(__FILE__)) . '/core/library/Loader.php';
+	require dirname( dirname( __FILE__ ) ) . '/core/library/Loader.php';
 
 	if ( ! defined('ABSPATH') && $loadfile = ShoppLoader::find_wpload() )
 		define('ABSPATH', dirname($loadfile) . '/');

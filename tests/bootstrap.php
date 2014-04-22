@@ -162,7 +162,7 @@ require WP_UNITTEST_DIR . '/testcase-xmlrpc.php';
 require WP_UNITTEST_DIR . '/testcase-ajax.php';
 require WP_UNITTEST_DIR . '/exceptions.php';
 require WP_UNITTEST_DIR . '/utils.php';
-require SHOPP_UNITTEST_DIR.'/testcase.php';
+require SHOPP_UNITTEST_DIR . '/testcase.php';
 
 ShoppTestCase::resetTables();
 

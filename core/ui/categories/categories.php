@@ -5,7 +5,7 @@
 	<?php do_action('shopp_admin_notices'); ?>
 
 	<form action="<?php echo esc_url($url); ?>" id="categories" method="get">
-	<?php include('navigation.php'); ?>
+	<?php include( 'navigation.php' ); ?>
 
 	<p id="post-search" class="search-box">
 		<input type="text" id="categories-search-input" class="search-input" name="s" value="<?php echo esc_attr(stripslashes($s)); ?>" />

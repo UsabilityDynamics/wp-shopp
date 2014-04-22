@@ -5,7 +5,7 @@
 
 	<?php $this->notices(); ?>
 
-	<?php include("navigation.php"); ?>
+	<?php include( "navigation.php" ); ?>
 	<br class="clear" />
 
 	<div id="order">

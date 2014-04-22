@@ -203,7 +203,7 @@ class ShoppInstallation extends ShoppFlowController {
 
 		// Make sure dbDelta() is available
 		if ( ! function_exists('dbDelta') )
-			require(ABSPATH.'wp-admin/includes/upgrade.php');
+			require( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
 
 		ob_start();

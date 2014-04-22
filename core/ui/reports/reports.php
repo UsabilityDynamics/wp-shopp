@@ -5,7 +5,7 @@
 	<?php do_action('shopp_admin_notices'); ?>
 
 	<form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" id="report" method="get">
-	<?php include("navigation.php"); ?>
+	<?php include( "navigation.php" ); ?>
 	<div>
 		<input type="hidden" name="page" value="<?php echo $page; ?>" />
 		<input type="hidden" name="report" value="<?php echo $report; ?>" />

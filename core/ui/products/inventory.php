@@ -6,7 +6,7 @@
 	<?php do_action('shopp_admin_notice'); ?>
 
 	<form action="" method="get">
-	<?php include("navigation.php"); ?>
+	<?php include( "navigation.php" ); ?>
 
 	<div>
 		<input type="hidden" name="page" value="<?php echo $this->Admin->pagename('products'); ?>" />

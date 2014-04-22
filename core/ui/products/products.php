@@ -6,7 +6,7 @@
 	<?php do_action('shopp_admin_notices'); ?>
 
 	<form action="<?php echo esc_url($url); ?>" method="get" id="products-manager">
-	<?php include('navigation.php'); ?>
+	<?php include( 'navigation.php' ); ?>
 
 	<div>
 		<input type="hidden" name="page" value="<?php echo $this->page(); ?>" />
