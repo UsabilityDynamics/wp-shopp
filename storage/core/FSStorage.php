@@ -344,7 +344,11 @@ class FSStorage extends StorageModule implements StorageEngine {
 	 * @return string | bool
 	 */
 	protected function storagepath() {
-	    if ( is_dir($this->path) ) return $this->path;
+
+    // @note The "shopp_fsstorage_storagepath" is added because in certain cases (e.g. when symbolic links are used, which are resolved by realpath()) its necessary to override the resolved paths. - potanin@UD
+    if ( is_dir($this->path) ) {
+      return apply_filters( 'shopp_fsstorage_storagepath', $this->path, $this );
+    }
 
 		$wp_content_path = trailingslashit(WP_CONTENT_DIR) . $this->path;
 		if ( is_dir($wp_content_path) ) return $wp_content_path;
