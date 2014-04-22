@@ -79,7 +79,7 @@ span.lowstock.warning { background: #C60; }
 /** List managers **/
 h2 a.add-new { font-style: normal; margin: 0px 6px; position: relative; top: -3px; font-family:'Lucida Grande',Verdana,Arial,'Bitstream Vera Sans',sans-serif;text-transform:none;}
 .row-actions { visibility:hidden;padding:2px 0 0; }
-tr:hover .row-actions,464646
+tr:hover .row-actions,
 div.comment-item:hover .row-actions { visibility:visible; }
 
 /** Editors Global **/
@@ -314,7 +314,7 @@ div.progress div.gloss { position:absolute;width:100%;height:10px;background:url
 #shopp-activation-nag { width:100%; box-sizing:border-box;}
 #shopp-activation-nag .dismiss { color:#ccc; margin-right:8px; }
 #shopp-activation-nag .dismiss:hover { color:#aaa; }
-#shopp-activation-nag .button { float: left; margin: 8px 20px 0 0; button }
+#shopp-activation-nag .button { float: left; margin: 8px 20px 0 0; }
 #shopp-activation-nag big { display:block; }
 
 #wpcontent .form-table select.scrolling { height:auto; }

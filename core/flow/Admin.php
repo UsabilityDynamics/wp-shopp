@@ -472,7 +472,6 @@ class ShoppAdmin extends ShoppFlowController {
 		wp_enqueue_style('shopp.admin', "$uri/admin.css", array(), $version, 'screen');
 		wp_enqueue_style('shopp.icons', "$uri/icons.css", array(), $version, 'screen');
 
-
 		$page = isset($_GET['page']) ? $_GET['page'] : '';
 		$pageparts = explode('-', $page);
 		$pagename = sanitize_key(end($pageparts));

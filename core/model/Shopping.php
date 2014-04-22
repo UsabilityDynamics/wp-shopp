@@ -80,7 +80,10 @@ class Shopping extends SessionObject {
 	 * @return void
 	 **/
 	public function init () {
+
+    // @note Causes some confusion when suppressing output as it results in blank screen on fatal errors. - potanin@UD
 		@session_start();
+
 		add_action('shopp_cart_updated', array($this,'savecart'));
 	}
 
