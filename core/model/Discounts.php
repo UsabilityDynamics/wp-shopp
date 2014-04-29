@@ -300,7 +300,8 @@ class ShoppDiscounts extends ListFramework {
 		$_REQUEST['cart'] = true;
 
 		$this->remove($Discount->id()); // Remove it from the discount stack if it is there
-		$this->shipping($Discount);		// Flag shipping changes
+		if ( $this->shipping($Discount) ) // Flag shipping changes
+			$Discount->shipfree(false);   // Remove free shipping if this is a free shipping discount (@see #2885)
 
 		if ( isset($this->codes[ $Discount->code() ]) ) {
 			unset($this->codes[ $Discount->code() ]);
@@ -976,6 +977,7 @@ class ShoppOrderDiscount {
 			$discounts = array();
 			foreach ( $this->items as $id => $unitdiscount ) {
 				$Item = $Cart->get($id);
+				if ( empty($Item) ) continue;
 
 				if ( self::BOGOF == $this->type() ) {
 					if ( ! is_array( $Item->bogof) ) $Item->bogof = array();
