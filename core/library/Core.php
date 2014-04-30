@@ -1160,7 +1160,6 @@ abstract class ShoppCore {
 	 * @return string The full template file path, if one is located
 	 **/
 	public static function locate_template ($template_names, $load = false, $require_once = false ) {
-    die('locate');
 		if ( ! is_array($template_names) ) return '';
 
 		$located = '';
