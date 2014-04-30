@@ -102,7 +102,7 @@ class ShoppStorefrontThemeAPI implements ShoppAPI {
 		if ( ! $_width ) $_width = $_size;
 		if ( ! $_height ) $_height = $_size;
 
-		$defaults = array(
+		$defaults = apply_filters( 'shopp_gallery_thumbnail', array(
 			'img' => false,
 			'id' => false,
 			'index' => false,
@@ -120,7 +120,7 @@ class ShoppStorefrontThemeAPI implements ShoppAPI {
 			'zoom' => '',
 			'zoomfx' => 'shopp-zoom',
 			'property' => false
-		);
+		));
 
 		// Populate defaults from named image settings to allow specific overrides
 		if ( ! empty($options['setting']) ) {
