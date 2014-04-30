@@ -154,7 +154,7 @@ class ShoppAdminSetup extends ShoppAdminController {
 			wp_die(__('You do not have sufficient permissions to access this page.'));
 
 		$builtin_path = SHOPP_PATH.'/templates';
-		$theme_path = sanitize_path(STYLESHEETPATH.'/shopp');
+		$theme_path = apply_filters( 'shopp_theme_path', sanitize_path(STYLESHEETPATH.'/shopp') );
 
 		$term_recount = false;
 
